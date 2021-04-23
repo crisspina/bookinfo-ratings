@@ -10,5 +10,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - run: docker build -t ghcr.io/crisspina/bookinfo-ratings:dev .
-      - run: docker images
+      - run: docker build -t ghcr.io/crisspina/bookinfo-ratings:dev .
       - run: docker push ghcr.io/crisspina/bookinfo-ratings:dev
