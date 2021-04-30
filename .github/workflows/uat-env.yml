@@ -50,5 +50,7 @@ jobs:
       needs: deploy
       runs-on: ubuntu-20.04
       steps:
-        - name: Check health check page     
+        - name: Check health check pages     
           run: curl http://bookinfo.uat.opsta.net/student124/ratings/health | grep "Ratings is working"
+
+
