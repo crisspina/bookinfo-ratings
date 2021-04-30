@@ -16,5 +16,5 @@ ingress:
 extraEnv:
   SERVICE_VERSION: v2
   MONGO_DB_URL: mongodb://bookinfo-dev-ratings-mongodb:27017/ratings
-  COMMIT_ID: CHANGEME
+  COMMIT_SHA: CHANGEME
 
