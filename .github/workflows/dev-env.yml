@@ -2,7 +2,7 @@ name: dev-env
 on:
   push:
     branches:
-      - dev   
+      - dev
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -16,10 +16,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
-        uses: docker/build-push-action@v2
-        with: 
+        uses: docker/build-push-action@v2 
+        with:
           push: true
-          tags: ghcr.io/crisspina/bookinfo-ratings:dev 
+          tags: ghcr.io/pusit20574/bookinfo-ratings:dev
   deploy:
     needs: build
     runs-on: ubuntu-20.04
@@ -40,6 +40,3 @@ jobs:
           namespace: student124-bookinfo-dev
           chart: k8s/helm
           value-files: k8s/helm-values/values-bookinfo-dev-ratings.yaml
-
-
-   
